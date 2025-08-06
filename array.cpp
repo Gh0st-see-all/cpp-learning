@@ -39,5 +39,37 @@ int main()
     cout << "Largest = " << largest << endl;
     cout << "At index " << largestIndex << endl;
 
+    // reverseing an array;
+    int arr[] = {1, 5, 9, 7, 3, 6, 10};
+    int size = 7;
+    int start = 0;
+    int end = size - 1;
+    // method one
+    while (start < end)
+    {
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
+    }
+    cout << "Step One reverse " << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << ", ";
+    }
+    cout << endl;
+    // Method two
+    start = 0;
+    end = size - 1;
+    cout << "Step TWo reverse " << endl;
+    for (int j = 0; j <= size / 2; j++)
+    {
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
+    }
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << ", ";
+    }
     return 0;
 }
